@@ -1,0 +1,321 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.intro {
+  background-color: hsl(240, 29%, 19%);
+  height: 100vh;
+  border-bottom: 5px solid #ff3c78;
+  width: 100%;
+}
+
+/*This is the navbar at the top of the page*/
+nav {
+  height: 10%;
+  width: 70%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+
+}
+
+a{
+  position: relative;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: #a0a0a0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+
+}
+
+a:after{
+  content: "";
+  position: absolute;
+  background-color: #ff3c78;
+  height: 5px;
+  width: 0;
+  left: 0px;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+}
+.nav-bar:hover:after{
+  width: 100%;
+}
+
+/*This is the start of the bio */
+
+div .main-image {
+  width: 35%;
+  height:35%;
+  text-align: right;
+  margin-left: 5%;
+  margin-right: 0;
+  margin-top: 5%;
+  border: 5px solid #ff3c78;
+  float: left;
+  min-width: 200px;
+  border-radius: 5%;
+}
+.bio {
+  border: 5px solid white;
+  width: 45%;
+  float: right;
+  padding: 15px;
+  margin-left: 0;
+  margin-right: 10%;
+  margin-top: 15%;
+  font-family: 'Poppins', sans-serif;
+  min-width: 200px;
+
+  
+}
+
+header.name {
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+}
+
+p {
+  font-size: 28px;
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+hr {
+  border: 3px solid ;
+  color: #ff3c78;
+  margin: 2px;
+}
+
+button {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 15px 25px;
+  border: 5px solid white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  margin-top: 5%;
+  float: right;
+  text-align: center;
+  margin-right: 27%;
+  margin-left: 13%;
+  min-width: 100px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:#ff3c78;
+  border: 5px solid #ff3c78;
+}
+
+button:active {
+  background-color:#c12c58;
+  transition: none;
+  border: 5px solid #c12c58;
+}
+
+/*Start of the about section*/
+
+.about{ 
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+/*This starts the skills section*/
+
+header.skills {
+  font-size: 48px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  font-weight: bold;
+}
+
+.skills-divider {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.skills-icons{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3%;
+}
+
+i{
+  border-radius: 5%;
+  padding: 2%;
+  background-color: hsl(240, 29%, 19%);
+  color: white;
+  display: flex;
+}
+
+.skills-disc{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  padding-top: 1%;
+  color: #454545;
+  font-style: italic;
+}
+
+.programming{
+  margin-left: 8%;
+}
+
+.illustration{
+  margin-right: 10%;
+}
+
+.skills:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.skills:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.skills-icons .hidden{
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.75s;
+}
+
+
+.skills-icons .show{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.skills-disc .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+  .skills-disc .hidden {
+    transition: none;
+  }
+}
+
+.skills-disc .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+header.coding-exp{
+  font-size: 38px;
+  color: #454545;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+
+.coding-exp-divider{
+  width: 20%;
+  margin: 0 auto;
+  padding-bottom:2%;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+
+.coding-exp-c,
+.coding-exp-python,
+.coding-exp-html,
+.coding-exp-css,
+.coding-exp-javascript {
+  padding: 1%;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+}
+/*This ends the skills section*/
+
+/*Projects section*/
+.projects{
+  background-color:whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  border-bottom: 5px solid #ff3c78;
+}
+
+header.project-header{
+  font-size: 48px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  font-weight: bold;
+}
+
+.project-divider{
+  width: 50%;
+  margin: 0 auto;
+}
+/*contact section*/
+.contact{
+  background-color:hsl(240, 29%, 19%);
+  width: 100vw;
+  height: 40vh;
+}
+
+header.contact-header{
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  font-weight: bold;
+}
+
+.contact-divider{
+  width: 50%;
+  margin: 0 auto;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+
+.contact-icons {
+  text-align:center;
+}
+
+.contact-icons:hover{
+  cursor: pointer;
+}
