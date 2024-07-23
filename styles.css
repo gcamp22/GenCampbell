@@ -256,7 +256,7 @@ header.coding-exp{
 .coding-exp-css,
 .coding-exp-javascript {
   padding: 1%;
-  font-size: 28px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
 }
